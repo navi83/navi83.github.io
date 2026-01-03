@@ -30,7 +30,7 @@ body{
 .card{
   background: var(--card-bg);
   border-radius:var(--radius);
-  padding:28px 32px;
+  padding:26px 28px;
   border:1px solid var(--card-border);
   box-shadow: 0 6px 20px rgba(2,6,23,0.04);
 }
@@ -44,7 +44,7 @@ body{
 .location{margin:4px 0 0;color:var(--muted);font-size:13px}
 
 /* Bio */
-.bio{margin:18px 0 20px;color:var(--text);line-height:1.6}
+.bio{margin:14px 0 18px;color:var(--text);line-height:1.6}
 
 /* Actions */
 .actions{display:flex;gap:12px;justify-content:flex-start;margin-bottom:14px}
@@ -59,7 +59,7 @@ body{
 .divider{height:1px;border:0;background:linear-gradient(90deg,transparent, rgba(0,0,0,0.04), transparent);margin:18px 0}
 
 /* Sections */
-.section-heading{margin:0 0 8px 0;font-size:16px;text-align:left;color:var(--text)}
+.section-heading{margin:0 0 12px 0;font-size:20px;text-align:left;color:var(--text);font-weight:700}
 .muted{color:var(--muted);font-size:13px}
 
 /* Skills */
@@ -72,6 +72,9 @@ body{
 /* Footer */
 .page-footer{margin-top:18px;color:var(--muted);font-size:13px}
 
+/* accent text (green) */
+.accent{color:var(--accent);font-weight:700}
+
 /* Responsive */
 @media (max-width:720px){
   .profile-header{flex-direction:column;align-items:flex-start}
@@ -83,3 +86,9 @@ body{
   .card{padding:18px}
   .meta{align-items:flex-start}
 }
+
+.timeline-item h3{margin:0;font-size:16px;color:var(--text);font-weight:700}
+.timeline-date{display:block;color:var(--muted);font-size:13px;margin-top:6px}
+
+.education-item h3{margin:0;font-size:16px;color:var(--text);font-weight:700}
+.education-item .muted{margin-top:6px}
