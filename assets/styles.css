@@ -30,6 +30,8 @@ body{
 .container{
     width:100%;
     max-width:var(--max-width);
+    padding-left:20px;
+    padding-right:20px;
 }
 
 .card{
@@ -64,6 +66,13 @@ body{
     display:block;
     box-shadow: 0 6px 18px rgba(56,189,248,0.12);
     border: 1px solid rgba(255,255,255,0.03);
+}
+
+.avatar-img.large{
+    width:160px;
+    height:160px;
+    border-radius:50%;
+    object-fit:cover;
 }
 
 .name{
@@ -117,6 +126,112 @@ body{
     border-color:rgba(56,189,248,0.9);
 }
 
+
+/* Site header / nav */
+.site-header{
+    background:transparent;
+    padding:14px 0;
+}
+.nav{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+.brand{
+    font-weight:700;
+    color:var(--text);
+    text-decoration:none;
+    font-size:18px;
+}
+.nav-links{
+    display:flex;
+    gap:12px;
+    list-style:none;
+    margin:0;
+    padding:0;
+    align-items:center;
+}
+.nav-links li{
+    margin:0;
+}
+.nav-links a{
+    color:var(--text);
+    text-decoration:none;
+    padding:8px 10px;
+    border-radius:8px;
+    font-size:14px;
+}
+.nav-links a:hover{
+    background:rgba(255,255,255,0.02);
+}
+.btn.small{
+    padding:6px 10px;
+    font-size:13px;
+    border-radius:8px;
+}
+
+/* Hero */
+.hero{
+    display:flex;
+    gap:24px;
+    align-items:center;
+    padding:36px 0;
+}
+.hero-left{
+    flex:1;
+}
+.hero-right{
+    flex:0 0 200px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+.lead{
+    color:var(--muted);
+    font-size:16px;
+    margin:8px 0 16px;
+}
+.accent{
+    color:var(--accent);
+    font-weight:700;
+}
+.hero-actions .btn{
+    margin-right:8px;
+}
+
+/* About */
+.about-grid{
+    display:grid;
+    grid-template-columns:1fr 240px;
+    gap:18px;
+    align-items:start;
+}
+.about-text p{
+    line-height:1.6;
+}
+.about-stats ul{
+    list-style:none;
+    padding:0;
+    margin:0;
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+}
+.about-stats li{
+    display:flex;
+    flex-direction:column;
+    background:rgba(255,255,255,0.02);
+    padding:10px;
+    border-radius:8px;
+}
+.about-stats li strong{
+    font-size:13px;
+}
+.about-stats li span{
+    color:var(--muted);
+    font-size:13px;
+    margin-top:6px;
+}
 
 /* New layout for profile top */
 .profile-card .profile-top{
@@ -200,10 +315,37 @@ body{
 .card-link{display:inline-block;margin-top:10px;color:var(--accent);font-weight:600;text-decoration:none}
 .card-link:hover{text-decoration:underline}
 
-/* Contact */
-.contact{margin-top:10px}
+/* Education */
+.education{margin-top:18px}
+.edu-list{display:flex;flex-direction:column;gap:12px}
+.edu-item{background:rgba(255,255,255,0.02);padding:14px;border-radius:10px;border:1px solid rgba(255,255,255,0.02)}
+.edu-school{margin:0;font-size:15px}
+.edu-degree{margin:6px 0 0;color:var(--muted);font-size:14px}
+.edu-dates{margin:8px 0 0;color:var(--muted);font-size:13px}
+
+/* Experience */
+.experience{margin-top:18px}
+.exp-list{display:flex;flex-direction:column;gap:12px}
+.exp-item{background:rgba(255,255,255,0.02);padding:14px;border-radius:10px;border:1px solid rgba(255,255,255,0.02)}
+.exp-header{display:flex;flex-direction:column}
+.exp-role{margin:0;font-size:15px}
+.exp-company{margin:6px 0 0;color:var(--muted);font-size:14px}
+.exp-dates{margin:8px 0 0;color:var(--muted);font-size:13px}
+.exp-desc{margin-top:10px;line-height:1.6}
+
+@media (max-width:720px){
+  .edu-list{gap:10px}
+  .exp-list{gap:10px}
+}
 
 /* Responsive tweaks */
+@media (max-width:880px){
+  .about-grid{grid-template-columns:1fr}
+  .hero{flex-direction:column;align-items:center;text-align:center}
+  .hero-right{order:-1}
+  .nav{padding:0}
+}
+
 @media (max-width:720px){
     .profile-card .profile-top{flex-direction:row;gap:12px}
     .profile-meta{text-align:left}
@@ -215,4 +357,7 @@ body{
     .name{font-size:20px}
     .profile-card .profile-top{flex-direction:column;align-items:center;text-align:center}
     .profile-meta{text-align:center}
+    .nav-links{display:none}
+    .hero-right{margin-top:12px}
+    .avatar-img.large{width:120px;height:120px}
 }

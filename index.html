@@ -1,107 +1,131 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Vy Huynh — Software Engineer</title>
-    <meta name="description" content="Vy Huynh — Software Engineer based in Vietnam." />
-    <link rel="stylesheet" href="assets/styles.css" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Vy Huynh — Software Engineer</title>
+  <meta name="description" content="Vy Huynh — Software Engineer based in Vietnam." />
+  <link rel="stylesheet" href="assets/styles.css" />
 </head>
 <body>
-  <main class="container">
-    <header class="card profile-card">
-      <div class="profile-top">
-        <!-- Use the avatar.svg placeholder image -->
-        <img class="avatar-img" src="assets/avatar.jpg" alt="Vy Huynh avatar" width="96" height="96" />
-        <div class="profile-meta">
-          <h1 class="name">Vy Huynh</h1>
-          <p class="role">Software Engineer</p>
-          <p class="location">Vietnam</p>
+  <header class="site-header">
+    <nav class="nav container">
+      <a class="brand" href="#">Vy Huynh</a>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a class="btn small" href="https://www.linkedin.com/in/hhoangvy38/" target="_blank" rel="noopener">LinkedIn</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="hero" class="hero container">
+      <div class="hero-left">
+        <h1>Hi, I'm <span class="accent">Vy Huynh</span></h1>
+        <p class="lead">Software Engineer building web and mobile applications. Based in Vietnam.</p>
+        <p class="hero-actions">
+          <a class="btn" href="mailto:your-email@example.com">Email me</a>
+          <a class="btn ghost" href="#contact">Contact</a>
+        </p>
+      </div>
+      <div class="hero-right">
+        <img class="avatar-img large" src="assets/avatar.jpg" alt="Vy Huynh avatar" width="180" height="180" />
+      </div>
+    </section>
+
+    <section id="about" class="about container">
+      <h2>About</h2>
+      <div class="about-grid">
+        <div class="about-text">
+          <p class="muted">Experienced Java developer with 3+ years of experience and a solid grasp of web services development.</p>
+          <p>Strong experience in working with Java, especially in building backend systems for web applications.</p>
+        </div>
+        <div class="about-stats">
+          <ul>
+            <li><strong>Location</strong><span>Vietnam</span></li>
+            <li><strong>Role</strong><span>Software Engineer</span></li>
+            <li><strong>Experience</strong><span>3+ years</span></li>
+          </ul>
         </div>
       </div>
+    </section>
 
-      <p class="bio">Hello — I'm Vy. I build web and mobile applications. This is a lightweight personal page; more details and UI updates will follow.</p>
+    <section id="experience" class="experience container">
+      <h2>Experience</h2>
+      <div class="exp-list">
+        <article class="exp-item">
+          <div class="exp-header">
+            <h3 class="exp-role">Software Engineer</h3>
+            <p class="exp-company">NAB Innovation Centre Vietnam · Full-time</p>
+          </div>
+          <p class="exp-dates">Nov 2024 - Present</p>
+          <p class="exp-desc muted">Working as a Software Engineer focusing on backend services and integrations.</p>
+        </article>
 
-      <div class="actions">
-        <a class="btn" href="https://github.com/navi83" target="_blank" rel="noopener">GitHub</a>
-        <a class="btn ghost" href="#projects">Projects</a>
-        <a class="btn ghost" href="#contact">Contact</a>
+        <article class="exp-item">
+          <div class="exp-header">
+            <h3 class="exp-role">Software Engineer</h3>
+            <p class="exp-company">FPT Software · Full-time</p>
+          </div>
+          <p class="exp-dates">May 2022 - Nov 2024 · 2 yrs 7 mos</p>
+          <p class="exp-desc muted">Worked on backend systems using Java; contributed to web services development and system design.</p>
+        </article>
       </div>
+    </section>
 
-      <div class="social" aria-label="social links">
-        <!-- GitHub -->
-        <a class="icon" href="https://github.com/navi83" target="_blank" rel="noopener" aria-label="GitHub">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 2C6.48 2 2 6.58 2 12.17c0 4.5 2.87 8.32 6.84 9.67.5.09.68-.22.68-.48 0-.24-.01-.87-.01-1.71-2.78.61-3.37-1.38-3.37-1.38-.45-1.18-1.11-1.5-1.11-1.5-.91-.63.07-.62.07-.62 1 .07 1.53 1.06 1.53 1.06.9 1.58 2.36 1.12 2.94.86.09-.67.35-1.12.64-1.38-2.22-.26-4.56-1.14-4.56-5.06 0-1.12.39-2.04 1.03-2.76-.1-.26-.45-1.3.1-2.7 0 0 .84-.27 2.76 1.05A9.2 9.2 0 0112 6.8c.85.004 1.71.12 2.51.35 1.92-1.32 2.76-1.05 2.76-1.05.55 1.4.2 2.44.1 2.7.64.72 1.03 1.64 1.03 2.76 0 3.93-2.34 4.8-4.57 5.05.36.31.68.92.68 1.85 0 1.33-.012 2.4-.012 2.73 0 .26.18.58.69.48A10.17 10.17 0 0022 12.17C22 6.58 17.52 2 12 2z" fill="currentColor"/></svg>
-        </a>
-        <!-- LinkedIn -->
-        <a class="icon" href="https://www.linkedin.com/in/hhoangvy38/" target="_blank" rel="noopener" aria-label="LinkedIn">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4.98 3.5C4.98 4.6 4.12 5.5 3 5.5 1.88 5.5 1 4.6 1 3.5 1 2.4 1.88 1.5 3 1.5c1.12 0 1.98.9 1.98 2zM.5 8h4.99V24H.5zM9.5 8h4.78v2.18h.07c.66-1.25 2.27-2.57 4.68-2.57C23.11 7.61 24 10 24 13.27V24h-5V14.4c0-2.35-.04-5.37-3.27-5.37-3.27 0-3.77 2.55-3.77 5.21V24h-5V8z" fill="currentColor"/></svg>
-        </a>
-        <!-- Email -->
-        <a class="icon" href="mailto:your-email@example.com" aria-label="Email">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" fill="currentColor"/></svg>
-        </a>
+    <section id="skills" class="skills container">
+      <h2>Skills</h2>
+      <p class="muted">Technologies and tools</p>
+      <div class="skill-list">
+        <span class="skill">Java</span>
+        <span class="skill">Spring Framework</span>
+        <span class="skill">AWS</span>
+        <span class="skill">Microservice</span>
+        <span class="skill">Kafka</span>
+        <span class="skill">Database</span>
       </div>
+    </section>
 
-      <hr class="divider" />
+    <section id="education" class="education container">
+      <h2>Education</h2>
+      <div class="edu-list">
+        <article class="edu-item">
+          <h3 class="edu-school">Ho Chi Minh City University of Technology</h3>
+          <p class="edu-degree">Bachelor's degree, Engineering Physics</p>
+          <p class="edu-dates">2013 - 2018</p>
+        </article>
+      </div>
+    </section>
 
-      <section id="skills" class="skills">
-        <h2 class="section-title">Skills</h2>
-        <p class="muted">A quick snapshot of technologies I work with (placeholders).</p>
-        <div class="skill-list">
-          <span class="skill">JavaScript</span>
-          <span class="skill">TypeScript</span>
-          <span class="skill">React</span>
-          <span class="skill">Node.js</span>
-          <span class="skill">Flutter</span>
-          <span class="skill">SQL</span>
-        </div>
-      </section>
-
-      <section id="projects" class="projects">
-        <h2 class="section-title">Projects</h2>
-        <p class="muted">Selected work — placeholders so we can add links and descriptions later.</p>
-        <div class="project-grid">
-          <article class="project-card">
-            <div class="project-meta">
-              <h3 class="project-title">Project One</h3>
-              <p class="project-desc">Short description — add details here later.</p>
-            </div>
-            <div class="project-tags">
-              <span class="tag">Web</span>
-              <span class="tag">Open Source</span>
-            </div>
-            <a class="card-link" href="#">View</a>
-          </article>
-
-          <article class="project-card">
-            <div class="project-meta">
-              <h3 class="project-title">Project Two</h3>
-              <p class="project-desc">Short description — add details here later.</p>
-            </div>
-            <div class="project-tags">
-              <span class="tag">Mobile</span>
-              <span class="tag">Side Project</span>
-            </div>
-            <a class="card-link" href="#">View</a>
-          </article>
-        </div>
-      </section>
-
-      <section id="contact" class="contact">
-        <h2 class="section-title">Contact</h2>
-        <p class="muted">Want to collaborate or just say hi? Replace the email below with your preferred address.</p>
+    <section id="contact" class="contact container">
+      <h2>Contact</h2>
+      <p class="muted">I'm available for freelance or full-time opportunities — let's connect.</p>
+      <p>
         <a class="btn" href="mailto:your-email@example.com">Email me</a>
-      </section>
-
-    </header>
-
-    <footer class="footer">Made for a simple personal intro page. — © <span id="year"></span> Vy Huynh</footer>
+        <a class="btn ghost" href="https://github.com/navi83" target="_blank" rel="noopener">GitHub</a>
+      </p>
+    </section>
   </main>
 
+  <footer class="footer">
+    <div class="container">© <span id="year"></span> Vy Huynh — Built with a lightweight static page</div>
+  </footer>
+
   <script>
-    // small script to set current year
     document.getElementById('year').textContent = new Date().getFullYear();
+    // smooth scroll for nav links
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click',function(e){
+        const href = this.getAttribute('href');
+        if(href.length>1){
+          e.preventDefault();
+          document.querySelector(href).scrollIntoView({behavior:'smooth'});
+        }
+      });
+    });
   </script>
 </body>
 </html>
