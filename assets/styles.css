@@ -37,9 +37,25 @@ body{
 
 /* Profile header */
 .profile-header{display:flex;align-items:center;gap:18px}
-.avatar{width:96px;height:96px;border-radius:50%;object-fit:cover;background:#fff;border:4px solid rgba(0,0,0,0.06)}
+.avatar-wrap{
+  width:96px;
+  height:96px;
+  border-radius:50%;
+  overflow:hidden;
+  flex:0 0 auto;
+  box-shadow: 0 6px 18px rgba(2,6,23,0.08);
+  border:4px solid rgba(0,0,0,0.06);
+}
+.avatar{
+  display:block;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  border-radius:0; /* wrapper handles rounding */
+  border:none;
+}
 .meta{display:flex;flex-direction:column}
-.name{margin:0;font-size:22px;color:var(--text)}
+.name{margin:0;font-size:20px;color:var(--text)}
 .role{margin:6px 0 0;color:var(--muted);font-size:14px}
 .location{margin:4px 0 0;color:var(--muted);font-size:13px}
 
@@ -59,7 +75,7 @@ body{
 .divider{height:1px;border:0;background:linear-gradient(90deg,transparent, rgba(0,0,0,0.04), transparent);margin:18px 0}
 
 /* Sections */
-.section-heading{margin:0 0 12px 0;font-size:20px;text-align:left;color:var(--text);font-weight:700}
+.section-heading{margin:0 0 12px 0;font-size:22px;text-align:left;color:var(--text);font-weight:800}
 .muted{color:var(--muted);font-size:13px}
 
 /* Skills */
@@ -78,7 +94,7 @@ body{
 /* Responsive */
 @media (max-width:720px){
   .profile-header{flex-direction:column;align-items:flex-start}
-  .avatar{width:80px;height:80px}
+  .avatar-wrap{width:80px;height:80px}
   .actions{justify-content:flex-start}
 }
 
@@ -87,8 +103,73 @@ body{
   .meta{align-items:flex-start}
 }
 
-.timeline-item h3{margin:0;font-size:16px;color:var(--text);font-weight:700}
-.timeline-date{display:block;color:var(--muted);font-size:13px;margin-top:6px}
+/* Stronger, explicit typographic hierarchy */
 
-.education-item h3{margin:0;font-size:16px;color:var(--text);font-weight:700}
-.education-item .muted{margin-top:6px}
+/* Section headings inside the card */
+.card section > .section-heading,
+.card > .section-heading {
+  font-size:28px !important;
+  font-weight:800 !important;
+  margin-bottom:16px !important;
+  line-height:1.15 !important;
+}
+
+/* Item titles (jobs, schools) should be smaller than section headings */
+.card .timeline-item > h3,
+.card .education-item > h3 {
+  font-size:14px !important;
+  font-weight:600 !important;
+  margin:0 0 6px 0 !important;
+  line-height:1.25 !important;
+}
+
+/* Subdued dates */
+.card .timeline-item .timeline-date {
+  font-size:12px !important;
+  color:var(--muted) !important;
+  margin-top:6px !important;
+}
+
+/* Ensure name is prominent but not larger than section headings */
+.card .name{font-size:20px !important;line-height:1.1}
+
+/* Stronger typography enforcement (final overrides) */
+.card > header .name{font-size:20px !important}
+.card .section-heading{font-size:28px !important; font-weight:800 !important}
+.card .timeline-item > h3, .card .education-item > h3{font-size:14px !important; font-weight:600 !important}
+.card .timeline-date{font-size:12px !important;color:var(--muted) !important}
+
+/* Final high-specificity overrides for perfect hierarchy */
+.card > section > .section-heading,
+.card > .section-heading,
+.card .section-heading {
+  font-size: 26px !important;
+  font-weight: 700 !important;
+  margin-bottom: 14px !important;
+  line-height: 1.12 !important;
+}
+
+.card .timeline-item > h3,
+.card .education-item > h3 {
+  font-size: 15px !important;
+  font-weight: 500 !important;
+  margin: 0 0 6px 0 !important;
+  color: var(--text) !important;
+  line-height: 1.2 !important;
+}
+
+/* make the company/school accent slightly less large so it doesn't outsize headings */
+.card .timeline-item > h3 .accent,
+.card .education-item > h3 .accent{ font-weight:600 !important; font-size:15px !important; }
+
+/* reduce visual weight of the name slightly */
+.card .name{font-size:19px !important; font-weight:700 !important}
+
+/* ensure dates stay small */
+.card .timeline-date{font-size:12px !important; color:var(--muted) !important}
+
+/* Small screens adjustments */
+@media (max-width:720px){
+  .card section > .section-heading{font-size:22px !important}
+  .card .timeline-item > h3{font-size:15px !important}
+}

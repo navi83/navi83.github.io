@@ -5,14 +5,22 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Vy Huynh — Software Engineer</title>
   <meta name="description" content="Vy Huynh — Software Engineer based in Vietnam." />
-  <link rel="stylesheet" href="assets/styles.css" />
+  <link rel="stylesheet" href="assets/styles.css?v=2" />
+  <style>
+    /* Immediate overrides to enforce hierarchy and fix avatar rendering */
+    .card section > .section-heading { font-size: 28px !important; font-weight: 800 !important; }
+    .card .timeline-item > h3, .card .education-item > h3 { font-size: 15px !important; font-weight: 600 !important; }
+    .card .timeline-date { font-size: 12px !important; color: inherit !important; }
+    .avatar-wrap { width:96px !important; height:96px !important; overflow:hidden !important; border-radius:50% !important; }
+    .avatar { width:100% !important; height:100% !important; object-fit:cover !important; border-radius:0 !important; }
+  </style>
 </head>
 <body>
   <main class="page-wrapper">
     <section class="card container">
       <header class="profile-header">
         <div class="avatar-wrap">
-          <img class="avatar" src="assets/avatar.jpg" alt="Vy Huynh avatar" width="96" height="96" />
+          <img class="avatar" src="assets/avatar.jpg?v=2" alt="Vy Huynh avatar" width="96" height="96" />
         </div>
         <div class="meta">
           <h1 class="name">Vy Huynh</h1>
