@@ -19,9 +19,9 @@ body{
   -webkit-font-smoothing:antialiased;
   -moz-osx-font-smoothing:grayscale;
   display:flex;
-  align-items:center;
+  align-items:flex-start; /* changed: place content from the top */
   justify-content:center;
-  padding:28px;
+  padding:80px 28px 28px; /* more space at top */
 }
 .page-wrapper{width:100%;max-width:var(--max-width)}
 .container{padding:20px}
@@ -93,6 +93,7 @@ body{
 
 /* Responsive */
 @media (max-width:720px){
+  body{padding:48px 18px 18px;} /* reduce top padding on smaller screens */
   .profile-header{flex-direction:column;align-items:flex-start}
   .avatar-wrap{width:80px;height:80px}
   .actions{justify-content:flex-start}
