@@ -36,7 +36,10 @@ body{
 }
 
 /* Profile header */
-.profile-header{display:flex;align-items:center;gap:18px}
+.profile-header{display:flex;align-items:center;gap:18px;justify-content:space-between}
+.profile-left{display:flex;align-items:center;gap:18px}
+.header-actions{display:flex;align-items:center;gap:12px}
+.header-actions .btn{padding:8px 12px;font-size:14px;border-radius:8px}
 .avatar-wrap{
   width:96px;
   height:96px;
