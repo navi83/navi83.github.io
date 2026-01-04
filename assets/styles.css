@@ -36,9 +36,9 @@ body{
 }
 
 /* Profile header */
-.profile-header{display:flex;align-items:center;gap:18px;justify-content:space-between}
+.profile-header{display:flex;align-items:flex-start;gap:18px;justify-content:space-between}
 .profile-left{display:flex;align-items:center;gap:18px}
-.header-actions{display:flex;align-items:center;gap:12px}
+.header-actions{display:flex;align-items:center;gap:12px;align-self:flex-start}
 .header-actions .btn{padding:8px 12px;font-size:14px;border-radius:8px}
 .avatar-wrap{
   width:96px;
@@ -57,7 +57,7 @@ body{
   border-radius:0; /* wrapper handles rounding */
   border:none;
 }
-.meta{display:flex;flex-direction:column}
+.meta{display:flex;flex-direction:column;justify-content:center}
 .name{margin:0;font-size:20px;color:var(--text)}
 .role{margin:6px 0 0;color:var(--muted);font-size:14px}
 .location{margin:4px 0 0;color:var(--muted);font-size:13px}
