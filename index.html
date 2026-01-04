@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Vy Huynh — Software Engineer</title>
   <meta name="description" content="Vy Huynh — Software Engineer based in Vietnam." />
-  <link rel="stylesheet" href="assets/styles.css?v=2" />
+  <link rel="stylesheet" href="assets/styles.css?v=4" />
   <style>
     /* Immediate overrides to enforce hierarchy and fix avatar rendering */
     .card section > .section-heading { font-size: 28px !important; font-weight: 800 !important; }
@@ -13,6 +13,12 @@
     .card .timeline-date { font-size: 12px !important; color: inherit !important; }
     .avatar-wrap { width:96px !important; height:96px !important; overflow:hidden !important; border-radius:50% !important; }
     .avatar { width:100% !important; height:100% !important; object-fit:cover !important; border-radius:0 !important; }
+
+    /* FORCE header layout: keep avatar and name inline, button top-right aligned */
+    header.profile-header { display:flex !important; align-items:flex-start !important; gap:18px !important; justify-content:flex-start !important; }
+    header.profile-header .profile-left { display:flex !important; align-items:flex-start !important; gap:18px !important; flex:0 1 auto !important; min-width:0 !important; }
+    header.profile-header .meta { display:flex !important; flex-direction:column !important; justify-content:flex-start !important; align-items:flex-start !important; }
+    header.profile-header .header-actions { margin-left:auto !important; align-self:flex-start !important; display:flex !important; align-items:center !important; gap:12px !important; margin-top:8px !important; }
   </style>
 </head>
 <body>
